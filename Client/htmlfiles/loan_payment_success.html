@@ -54,16 +54,16 @@
             </div>
             <hr style="border: 1px solid gray;">
             <div class="box">
-                <h2>To</h2>
-                <div style="font-size: 2.5rem;height: 3rem;font-weight: 550;">Reciever Name</div>
-                <p>Transaction id: 651654661611</p>
+                <h2>Transaction Details</h2>
+                <p>Loan id: 651654661611</p>
                 <p>Paid: Online</p>
                 <p>Status: Successful</p>
+                <h3 style="line-height: 3rem;">Outstanding Amount: 155665</h3>
             </div>
             <hr style="border: 1px solid gray;">
             <div class="box">
                 <h2>From</h2>
-                <div style="font-size: 2.5rem;height: 3rem;font-weight: 550;">Sender Name</div>
+                <div style="font-size: 1.75rem;height: 3rem;font-weight: 550; line-height: 3rem;">Sender Name</div>
                 <p>Remaining Balance: &#x20B9 646466</p>
             </div>
             <div style="text-align: center; margin-top: 1rem; font-size: 22px;">Paid at 08:08PM, 14 Apr 2023</div>
@@ -106,7 +106,7 @@
 
             let outputText = num[1] != 0 ? (oneToTwenty[Number(num[1])] || `${tenth[num[1][0]]} ${oneToTwenty[num[1][1]]}`) + ' million ' : '';
 
-            outputText +="Rupees "
+            outputText += "Rupees "
             outputText += num[2] != 0 ? (oneToTwenty[Number(num[2])] || `${tenth[num[2][0]]} ${oneToTwenty[num[2][1]]}`) + 'hundred ' : '';
             outputText += num[3] != 0 ? (oneToTwenty[Number(num[3])] || `${tenth[num[3][0]]} ${oneToTwenty[num[3][1]]}`) + ' thousand ' : '';
             outputText += num[4] != 0 ? (oneToTwenty[Number(num[4])] || `${tenth[num[4][0]]} ${oneToTwenty[num[4][1]]}`) + 'hundred ' : '';
