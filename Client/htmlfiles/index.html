@@ -78,6 +78,22 @@
 			</div>
 		</div>
 		</section>
+		<script>
+			function test() {
+				var selected = document.getElementById('options').value;
+				if (selected == 'home') {
+					console.log("home: " + selected);
+					document.location.href = 'main.php?id=<?php echo $id ?>'
+				}
+				else if (selected == 'logout') {
+					console.log("logout: " + selected);
+					document.location.href = 'login.php';
+				}
+
+				else
+					console.log("Invalid Input type")
+			}
+		</script>
 </body>
 
 </html>
