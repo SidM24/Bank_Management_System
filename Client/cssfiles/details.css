@@ -1,0 +1,76 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: url('../Images/details_page.png') no-repeat;
+    background-size: cover;
+}
+
+/* Navbar Css */
+.nav_container {
+    width: 100%;
+    background-color: black;
+}
+
+nav ul li a img {
+    height: 4rem;
+    width: 5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+nav a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.select_box {
+    width: 5rem;
+    height: 44px;
+    position: absolute;
+    opacity: 0;
+}
+
+option {
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.user_icon {
+    margin-right: 3rem;
+}
+
+.container {
+    padding: 1rem;
+    width: 25rem;
+    height: 29rem;
+    margin: auto;
+    /* border: 2px solid red; */
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+p {
+    line-height: 2rem;
+    font-size: 16px;
+    font-weight: 600;
+}
