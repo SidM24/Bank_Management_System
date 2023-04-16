@@ -50,10 +50,77 @@
                     <th>Transaction Id</th>
                     <th>Send/Recieved</th>
                     <th>Amount</th>
-                    <th>Time</th>
-                    <th>Type</th>
+                    <th style="text-align: center;">Time</th>
                 </tr>
             </thead>
+            <tbody>
+                <tr>
+                    <td>564646465465465</td>
+                    <td> Send</td>
+                    <td> &#x20B9 5000</td>
+                    <td style="text-align: center;""> 8:00, 14/02/2023</td>
+                </tr>
+                <!-- }
+                } else {
+                echo " <tr>
+                    <td colspan='5'>No transaction history found</td>
+                </tr>";
+                }
+                $sql1 = "SELECT h.sender_id, h.receiver_id, h.amount, h.time, h.type, a2.email AS receiver_email FROM
+                history h
+
+                INNER JOIN account a2 ON h.receiver_id = a2.id
+                WHERE h.type = 'loan' and receiver_id=$id";
+                $result1 = mysqli_query($conn, $sql1);
+                if (mysqli_num_rows($result1) > 0) {
+                // Loop through each row and display the data in the table
+                while ($row = mysqli_fetch_assoc($result1)) {
+                echo "<tr>";
+                    echo "<td>" . 'NULL' . "</td>";
+                    echo "<td>" . $row['receiver_email'] . "</td>";
+                    echo "<td>" . $row['amount'] . "</td>";
+                    echo "<td>" . $row['time'] . "</td>";
+                    echo "<td>" . $row['type'] . "</td>";
+                    echo "</tr>"; -->
+            </tbody>
+        </table>
+        <!-- <h2>
+    
+            <?php
+    $conn = mysqli_connect('localhost', 'id20545063_root', 'ggLU1R88c$-ih{2r', 'id20545063_login');
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    $sql2 = "SELECT balance FROM account WHERE id = {$_SESSION['id']}";
+    $result2 = mysqli_query($conn, $sql2);
+    $row2 = mysqli_fetch_assoc($result2);
+    echo "Balance is " . $row2['balance'];
+    ?>
+        </h2> -->
+    </div>
+    <div class="tran_box">
+        <h1 style="text-align: center;">Loan History</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Loan Id</th>
+                    <th>Loan Amount</th>
+                    <th>Pending Amount</th>
+                    <th>Time Period</th>
+                    <th>Status</th>
+                    <th>Pay Now</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>98465166646</td>
+                    <td>&#x20B9 54646</td>
+                    <td>&#x20B9 5000</td>
+                    <td>5 months</td>
+                    <td>Approved</td>
+                    <td><button class="pay_btn">Pay Now</button></td>
+                </tr>
+            </tbody>
             <!-- <tbody>
                 <?php
                     // Database connection
@@ -112,20 +179,6 @@
                 ?>
             </tbody> -->
         </table>
-        <!-- <h2>
-    
-            <?php
-    $conn = mysqli_connect('localhost', 'id20545063_root', 'ggLU1R88c$-ih{2r', 'id20545063_login');
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    $sql2 = "SELECT balance FROM account WHERE id = {$_SESSION['id']}";
-    $result2 = mysqli_query($conn, $sql2);
-    $row2 = mysqli_fetch_assoc($result2);
-    echo "Balance is " . $row2['balance'];
-    ?>
-    
-        </h2> -->
     </div>
 
 </body>
