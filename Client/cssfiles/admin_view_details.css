@@ -1,0 +1,115 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: url('../Images/admin.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 100vh;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+td:first-child {
+    font-weight: bold;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+    font-style: italic;
+}
+
+td:nth-child(4) {
+    font-family: monospace;
+}
+
+.tran_box {
+    /* margin-top: 2rem; */
+    padding: 5rem;
+}
+
+/* Navbar Css */
+.nav_container {
+    width: 100%;
+    background-color: black;
+}
+
+nav ul li a img {
+    height: 4rem;
+    width: 5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+nav a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.select_box {
+    width: 5rem;
+    height: 44px;
+    position: absolute;
+    opacity: 0;
+}
+
+option {
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.user_icon {
+    margin-right: 3rem;
+}
+
+.pay_btn {
+    width: 5rem;
+    text-align: center;
+    border: 2px solid rgb(36, 180, 36);
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(36, 180, 36);
+    height: 2rem;
+}
+
+button:hover {
+    background-color: rgb(30, 143, 30);
+}
