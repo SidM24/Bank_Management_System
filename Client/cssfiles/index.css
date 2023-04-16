@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.Serv_head {
+    font-family: 'Courgette', cursive;
+}
+
+.homepage {
+    background: url('../Images/index.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    padding: 50px;
+}
+
+h1 {
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 6rem;
+}
+
+h2 {
+    color: #fff;
+}
+
+p {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #fff;
+    color: #000;
+    font-size: 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out
+}
+
+.btn:hover {
+    background: gray;
+    color: #fff;
+}
+
+.services {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    min-height: 100vh;
+    position: relative;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('../Images/index.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.services h1 {
+    color: #fff;
+    font-size: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.campus-column {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+
+}
+
+.campus-column img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.campus-column:hover img {
+    transform: scale(1.1);
+}
+
+.layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: 0.5s ease;
+}
+
+.campus-column:hover .layer {
+    height: 100%;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.layer h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 5rem;
+    transition: 0.5s ease;
+}
+
+.campus-column:hover .layer h3 {
+    margin-top: 20px;
+}
+
+/* Navbar Css */
+.nav_container {
+    width: 100%;
+    background-color: black;
+}
+
+nav ul li a img {
+    height: 4rem;
+    width: 5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+nav a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.select_box {
+    width: 5rem;
+    height: 44px;
+    position: absolute;
+    opacity: 0;
+}
+
+option {
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.user_icon {
+    margin-right: 3rem;
+}

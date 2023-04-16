@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="../cssfiles/tran_hist.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav_container">
+        <nav>
+            <ul style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                    <li>
+                        <a href="main.php?id=<?php echo $id ?>"><img src="../Images/logo.png" alt="Loading Img.."></a>
+                    </li>
+                </div>
+                <div>
+                    <h2 style="color: white; font-size: 30px;"
+                        onclick="document.location.href='main.php?id=<?php echo $id ?>'">Bank Management System</h2>
+                </div>
+                <div style="display: flex;">
+                    <img class="user_icon" src="../Images/user_logo.png" alt="User"
+                        style="height: 2.5rem; margin-left: 0.5rem;">
+                    <select class="select_box user_icon" name="" id="options" onchange="test(value)">
+                        <option value="" style="display: none;"></option>
+                        <!-- home -->
+                        <option value="home">
+                            <a href="">Home</a>
+                        </option>
+                        <!-- logout -->
+                        <option value="logout">
+                            <li><a href="">Logout</a></li>
+                        </option>
+                    </select>
+                </div>
+            </ul>
+        </nav>
+    </div>
+    <!-- Transaction History Table -->
+    <div class="tran_box">
+        <h1 style="text-align: center;">Transaction History</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Transaction Id</th>
+                    <th>Send/Recieved</th>
+                    <th>Amount</th>
+                    <th>Time</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <!-- <tbody>
+                <?php
+                    // Database connection
+                    $conn = mysqli_connect('localhost', 'id20545063_root', 'ggLU1R88c$-ih{2r', 'id20545063_login');
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                    }
+                    $id=$_SESSION['id'];
+                    // SQL query to select all rows from the history table
+                    $sql = "SELECT h.sender_id, h.receiver_id, h.amount, h.time, h.type, a1.email AS sender_email, a2.email AS receiver_email FROM history h
+                    INNER JOIN account a1 ON h.sender_id = a1.id
+                    INNER JOIN account a2 ON h.receiver_id = a2.id
+                    WHERE sender_id=$id or receiver_id=$id";
+    
+                    $result = mysqli_query($conn, $sql);
+    
+                    if (mysqli_num_rows($result) > 0) {
+                        
+                        // Loop through each row and display the data in the table
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            
+                            echo "<tr>";
+                            echo "<td>" . $row['sender_email'] . "</td>";
+                            echo "<td>" . $row['receiver_email'] . "</td>";
+                            echo "<td>" . $row['amount'] . "</td>";
+                            echo "<td>" . $row['time'] . "</td>";
+                            echo "<td>" . $row['type'] . "</td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='5'>No transaction history found</td></tr>";
+                    }
+                    $sql1 = "SELECT h.sender_id, h.receiver_id, h.amount, h.time, h.type,  a2.email AS receiver_email FROM history h
+                    
+                    INNER JOIN account a2 ON h.receiver_id = a2.id
+                    WHERE h.type = 'loan' and receiver_id=$id";
+           $result1 = mysqli_query($conn, $sql1);
+           if (mysqli_num_rows($result1) > 0) {
+               // Loop through each row and display the data in the table
+               while ($row = mysqli_fetch_assoc($result1)) {
+                   echo "<tr>";
+                   echo "<td>" . 'NULL' . "</td>";
+                   echo "<td>" . $row['receiver_email'] . "</td>";
+                   echo "<td>" . $row['amount'] . "</td>";
+                   echo "<td>" . $row['time'] . "</td>";
+                   echo "<td>" . $row['type'] . "</td>";
+                   echo "</tr>";
+               }
+           } else {
+               echo "<tr><td colspan='5'>No loan transactions found</td></tr>";
+           }
+           
+    
+                    // Close database connection
+                    mysqli_close($conn);
+                ?>
+            </tbody> -->
+        </table>
+        <!-- <h2>
+    
+            <?php
+    $conn = mysqli_connect('localhost', 'id20545063_root', 'ggLU1R88c$-ih{2r', 'id20545063_login');
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    $sql2 = "SELECT balance FROM account WHERE id = {$_SESSION['id']}";
+    $result2 = mysqli_query($conn, $sql2);
+    $row2 = mysqli_fetch_assoc($result2);
+    echo "Balance is " . $row2['balance'];
+    ?>
+    
+        </h2> -->
+    </div>
+
+</body>
+
+</html>

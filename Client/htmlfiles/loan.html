@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" type="text/css" href="../cssfiles/loan.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="nav_container">
+        <nav>
+            <ul style="display: flex; align-items: center; justify-content: space-between;">
+                <div>
+                    <li>
+                        <a href="main.php?id=<?php echo $id ?>"><img src="../Images/logo.png" alt="Loading Img.."></a>
+                    </li>
+                </div>
+                <div>
+                    <h2 style="color: white; font-size: 30px;"
+                        onclick="document.location.href='main.php?id=<?php echo $id ?>'">Bank Management System</h2>
+                </div>
+                <div style="display: flex;">
+                    <img class="user_icon" src="../Images/user_logo.png" alt="User"
+                        style="height: 2.5rem; margin-left: 0.5rem;">
+                    <select class="select_box user_icon" name="" id="options" onchange="test(value)">
+                        <option value="" style="display: none;"></option>
+                        <!-- home -->
+                        <option value="home">
+                            <a href="">Home</a>
+                        </option>
+                        <!-- logout -->
+                        <option value="logout">
+                            <li><a href="">Logout</a></li>
+                        </option>
+                    </select>
+                </div>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <h1>Loan Application</h1>
+        <form action="loan.php" method="POST">
+            <input class="form_field" type="number" id="loan_amount" name="loan_amount" required
+                placeholder="Loan Amount">
+            <input class="form_field" type="number" id="total_months" name="total_months" required
+                placeholder="Total Months">
+            <input class="form_field" type="number" id="rate" name="rate" required placeholder="Rate of Interest">
+            <div style="width: 10rem;">
+                <input type="submit" name="submit" value="SUBMIT">
+            </div>
+            <div style="margin-top: 6rem;">
+                <h3>
+                    <!-- <?php echo "your current balance: " . $_SESSION['balance']; ?> -->
+                    Current Balance:50000
+                </h3>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

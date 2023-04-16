@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer_Money</title>
+    <link rel="stylesheet" type="text/css" href="../cssfiles/transfer_money.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <nav>
+                <ul style="display: flex; align-items: center; justify-content: space-between;">
+                    <div>
+                        <li>
+                            <a href="main.php?id=<?php echo $id ?>"><img src="../Images/logo.png"
+                                    alt="Loading Img.."></a>
+                        </li>
+                    </div>
+                    <div>
+                        <h2 style="color: white; font-size: 30px;"
+                            onclick="document.location.href='main.php?id=<?php echo $id ?>'">Bank Management System</h2>
+                    </div>
+                    <div style="display: flex;">
+                        <img class="user_icon" src="../Images/user_logo.png" alt="User"
+                            style="height: 2.5rem; margin-left: 0.5rem;">
+                        <select class="select_box user_icon" name="" id="options" onchange="test(value)">
+                            <option value="" style="display: none;"></option>
+                            <!-- home -->
+                            <option value="home">
+                                <a href="">Home</a>
+                            </option>
+                            <!-- logout -->
+                            <option value="logout">
+                                <li><a href="">Logout</a></li>
+                            </option>
+                        </select>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        <div class="content" style="display: flex; justify-content: space-around;">
+            <div class="transfer_container flex_box">
+                <h1 style="text-align: center;">Transfer Money</h1>
+                <br>
+                <form method="post" action="bankt.php">
+                    <input class="form_field" type="text" name="email" placeholder="Email Address" required>
+                    <input class="form_field" type="number" name="amount" min="0" required placeholder="Enter Amount">
+                    <input class="form_field" type="text" name="password" required placeholder="Enter Your Password">
+                    <button class="button_1" type="submit" name="submit_3">Transfer</button>
+                </form>
+            </div>
+            <div class="transfer_text flex_box">
+                <h1>Transfer Money Across <br> World In Real Time <br> With No Charge</h1>
+            </div>
+        </div>
+    </div>
+    <script>
+        function test() {
+            var selected = document.getElementById('options').value;
+            if (selected == 'home') {
+                console.log("home: " + selected);
+                document.location.href = 'main.php?id=<?php echo $id ?>'
+            }
+            else if (selected == 'logout') {
+                console.log("logout: " + selected);
+                document.location.href = 'login.php';
+            }
+
+            else
+                console.log("Invalid Input type")
+        }
+    </script>
+</body>
+
+</html>

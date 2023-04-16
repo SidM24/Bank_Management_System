@@ -1,0 +1,129 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: url('../Images/loan_page.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* CSS for loan form */
+.container {
+    margin: 4rem auto;
+    max-width: 23rem;
+    height: 28rem;
+    background-color: #dddddd;
+    border-radius: 29px;
+    padding: 30px;
+
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: #30d330;
+    border: none;
+    border-radius: 20px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    width: 9rem;
+    margin-left: 8rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #219b21;
+    color: white;
+}
+
+/* Navbar Css */
+.nav_container {
+    width: 100%;
+    background-color: black;
+}
+
+nav ul li a img {
+    height: 4rem;
+    width: 5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+nav a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.select_box {
+    width: 5rem;
+    height: 44px;
+    position: absolute;
+    opacity: 0;
+}
+
+option {
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.user_icon {
+    margin-right: 3rem;
+}
+
+/* Form Css */
+.form_field {
+    height: 2.2rem;
+    width: 96%;
+    margin-top: 20px;
+}
+
+input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 15px;
+    border: 1px solid lightgrey;
+    border-bottom-width: 2px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #1a75ff;
+    box-shadow: inset 0 0 3px #fb6aae;
+}
+
+input::placeholder {
+    color: #999;
+    transition: all 0.3s ease;
+
+}
+
+input:focus::placeholder {
+    color: #1a75ff;
+}

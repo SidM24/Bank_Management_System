@@ -1,0 +1,100 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    height: 33.4rem;
+    width: 25rem;
+    border: 3px solid gray;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgb(242, 242, 242);
+}
+
+.p_unsucc {
+    text-align: center;
+    color: rgb(200, 3, 13);
+}
+
+.box {
+    margin: 1rem;
+}
+
+img {
+    margin-top: 0.15rem;
+    height: 2.3rem;
+}
+
+p {
+    padding-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+button {
+    font-size: 20px;
+    border: 2px solid rgb(200, 3, 13);
+    width: 6rem;
+    background-color: rgb(200, 3, 13);
+    border-radius: 15px;
+    height: 2.3rem;
+    margin: auto;
+    color: white;
+    font-weight: 400;
+}
+
+button a {
+    color: white;
+    font-weight: 400;
+}
+
+/* Navbar Css */
+.nav_container {
+    width: 100%;
+    background-color: black;
+}
+
+nav ul li a img {
+    height: 4rem;
+    width: 5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+nav a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+.select_box {
+    width: 5rem;
+    height: 44px;
+    position: absolute;
+    opacity: 0;
+}
+
+option {
+    text-align: center;
+    font-size: 16px;
+
+}
+
+.user_icon {
+    margin-right: 3rem;
+}
