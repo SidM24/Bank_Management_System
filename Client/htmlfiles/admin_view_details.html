@@ -44,17 +44,23 @@
     <!-- View Details -->
     <div class="tran_box">
         <h1 style="text-align: center;">User Details</h1>
-        <select name="" id="filteropt" onchange="filter(value)">
-            <option value="">Default</option>
-            <!-- home -->
-            <option value="balance">
-                <a href="">Balance</a>
-            </option>
-            <!-- logout -->
-            <option value="branch">
-                <li><a href="">Branch</a></li>
-            </option>
-        </select>
+        <div class="filter_layer" style="display: flex; align-items: center;">
+            <select class="filter_opt_css" name="filteropt" id="filteropt">
+                <option value="">Default</option>
+                <!-- home -->
+                <option value="balance">
+                    <a href="">Balance</a>
+                </option>
+                <!-- logout -->
+                <option value="branch">
+                    <li><a href="">Branch</a></li>
+                </option>
+            </select>
+            <div class="button_layer">
+                <button class="filter_btn" type="submit" name="filter_submit"><img
+                        style="height: 1rem; width: 1rem; border: 0;" src="../Images/filter_icon.png" alt=""></button>
+            </div>
+        </div>
         <div>
             <table>
                 <thead>

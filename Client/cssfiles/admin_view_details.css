@@ -113,3 +113,29 @@ option {
 button:hover {
     background-color: rgb(30, 143, 30);
 }
+
+.filter_opt_css {
+    width: 10rem;
+    border-radius: 10px;
+    height: 1.5rem;
+    font-size: 16px;
+    margin-left: 2rem;
+    margin-right: 0.5rem;
+}
+
+.filter_opt_css:hover {
+    cursor: pointer;
+}
+
+.filter_btn {
+    width: 2rem;
+    height: 1.75rem;
+    border-radius: 10px;
+    padding: 0.3rem;
+    appearance: none;
+}
+
+.filter_btn:hover {
+    cursor: pointer;
+    background-color: white;
+}
