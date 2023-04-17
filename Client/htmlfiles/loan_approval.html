@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Details</title>
-    <link rel="stylesheet" href="../cssfiles/admin_view_details.css">
+    <title>Loan Applicaitons</title>
+    <link rel="stylesheet" href="../cssfiles/loan_approval.css">
 </head>
 
 <body>
@@ -43,33 +43,16 @@
     </div>
     <!-- View Details -->
     <div class="tran_box">
-        <h1 style="text-align: center;">User Details</h1>
-        <div class="filter_layer" style="display: flex; align-items: center;">
-            <select class="filter_opt_css" name="filteropt" id="filteropt">
-                <option value="">Default</option>
-                <!-- home -->
-                <option value="balance">
-                    <a href="">Balance</a>
-                </option>
-                <!-- logout -->
-                <option value="branch">
-                    <li><a href="">Branch</a></li>
-                </option>
-            </select>
-            <div class="button_layer">
-                <button class="filter_btn" type="submit" name="filter_submit"><img
-                        style="height: 1rem; width: 1rem; border: 0;" src="../Images/filter_icon.png" alt=""></button>
-            </div>
-        </div>
+        <h1 style="text-align: center;">Loan Applications</h1>
         <div>
             <table>
                 <thead>
                     <tr>
                         <th>Email Address</th>
                         <th>Name</th>
-                        <th>Account Number</th>
-                        <th>Balance</th>
-                        <th>Branch</th>
+                        <th>Loan Amount</th>
+                        <th>Loan Duration</th>
+                        <th>Approve</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -78,11 +61,21 @@
                         <td>
                             <p>First_Name Last_Name</p>
                         </td>
-                        <td> 64646464654</td>
-                        <td> &#x20B9 5000</td>
-                        <td> SBI-Patiala</td>
+                        <td> &#x20B9 65161</td>
+                        <td> 5 Months</td>
+                        <td> <button class="approve_btn" type="submit" name="Approve" id="Approve">Approve</button></td>
                     </tr>
-                    <!-- }
+                </tbody>
+
+                <!-- if No pending application then  -->
+                <!-- <tbody>
+                    <tr>
+                        <td colspan="5" style="font-size: 20px; color: red; background-color: rgba(255,255,255,0.8);">No
+                            Pending Applications For Approval </td>
+                    </tr>
+                </tbody> -->
+
+                <!-- }
                     } else {
                     echo " <tr>
                         <td colspan='5'>No transaction history found</td>
@@ -104,33 +97,6 @@
                         echo "<td>" . $row['time'] . "</td>";
                         echo "<td>" . $row['type'] . "</td>";
                         echo "</tr>"; -->
-                </tbody>
-            </table>
-        </div>
-
-        <h1 style="text-align: center; margin-top: 8rem;">Loans Given</h1>
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Email Address</th>
-                        <th>Name</th>
-                        <th>Loan Amount</th>
-                        <th>Loan Duration</th>
-                        <th>Pending Amount</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td> sample@gmail.com</td>
-                        <td>
-                            <p>First_Name Last_Name</p>
-                        </td>
-                        <td> &#x20B9 5646</td>
-                        <td> 5 Months </td>
-                        <td> &#x20B9 5000</td>
-                    </tr>
-                </tbody>
             </table>
         </div>
         <!-- <h2>
@@ -163,7 +129,6 @@
             else
                 console.log("Invalid Input type")
         }
-
     </script>
 </body>
 
